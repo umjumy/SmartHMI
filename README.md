@@ -7,11 +7,17 @@ Specifically, the DLL library for the ISO 14649 metadata manager allows for the 
 
 In summary, the ISO 14649 metadata manager DLL library is an essential tool for implementing the ISO 14649 standard in manufacturing systems, enabling efficient and standardized exchange of data.
 
+# Input and Output Data
+The input and output file format of this Dll library for the ISO 14649 metadata manager are as follows:
+1. Virtual Machine: JSON to JSON
+2. Sketchturn: XML to JSON
+3. NXCAM: MySQL to JSOM
+
 # Implementation Code Example
-Code example to use SketchturnDll
+Code example to use VirtualMachineDll
 
 ```
-SketchturnClass st = new SketchturnClass();
-string inputFile = "File location";
-string outputFile = "File location";
-st.SketchturnMetadata(inputFile, outputFile);
+VirtualMachineClass vm = new VirtualMachineClass();
+string inputFile = "File directory"; //example D:\\Data\\CAVITY_MILL_ROUGH.json
+string outputFile= "File directory"; //example D:\\Data\\virtual_machine_metadata.json
+vm.VMmetadata(inputFile, outputFile);
