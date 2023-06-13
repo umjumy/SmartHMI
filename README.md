@@ -14,7 +14,7 @@ The input and output file format of this Dll library for the ISO 14649 metadata 
 3. NXCAM: MySQL to JSON
 
 # Implementation Code Example
-Code example to use VirtualMachineDll
+Code example to use SketchturnDll
 
 ```
 SketchturnClass st = new SketchturnClass();
