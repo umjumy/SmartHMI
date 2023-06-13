@@ -17,10 +17,17 @@ The input and output file format of this Dll library for the ISO 14649 metadata 
 Code example to use VirtualMachineDll
 
 ```
-VirtualMachineClass vm = new VirtualMachineClass();
-string inputFile = "File directory"; //example D:\\Data\\CAVITY_MILL_ROUGH.json
-string outputFile= "File directory"; //example D:\\Data\\virtual_machine_metadata.json
-vm.VMmetadata(inputFile, outputFile);
+SketchturnClass st = new SketchturnClass();
+            string inputFile = textBox7.Text;
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "Select the directory to save generated metadata file";
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedDirectory = folderBrowserDialog.SelectedPath;
+                string outputFile = Path.Combine(selectedDirectory, "example_sketchturn_metadata.json");
+                textBox1.Text = st.SketchturnMetadata(inputFile, outputFile);
+                textBox6.Text = outputFile;
+            }
 ```
 
 # Acknowledge
